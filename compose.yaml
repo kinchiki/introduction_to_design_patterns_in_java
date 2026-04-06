@@ -1,0 +1,11 @@
+services:
+  java:
+    build: ./docker/
+    volumes:
+      - type: bind
+        source: ./
+        target: /app/
+    working_dir: /app/
+    environment:
+      MAIN_CLASS: ch01.Sample1
+    command: ./gradlew run --continuous -Pmain=${MAIN_CLASS}
