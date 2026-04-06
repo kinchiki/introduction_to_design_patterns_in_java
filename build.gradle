@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+application {
+    mainClass = project.findProperty("main") ?: "ch01.Sample1"
+}
+
+tasks.withType(JavaExec).configureEach {
+    standardInput = System.in
+}
