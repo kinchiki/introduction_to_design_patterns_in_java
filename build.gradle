@@ -14,9 +14,18 @@ repositories {
 }
 
 application {
-    mainClass = project.findProperty("main") ?: "ch01.Sample1"
+    mainClass = project.findProperty("main") ?: "ch01.Main"
 }
 
 tasks.withType(JavaExec).configureEach {
     standardInput = System.in
+}
+
+tasks.named('run') {
+    doFirst {
+        println "\n==================== RUN START ====================\n"
+    }
+    doLast {
+        println "\n==================== RUN END ======================\n"
+    }
 }
