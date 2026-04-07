@@ -20,3 +20,12 @@ application {
 tasks.withType(JavaExec).configureEach {
     standardInput = System.in
 }
+
+tasks.named('run') {
+    doFirst {
+        println "\n==================== RUN START ====================\n"
+    }
+    doLast {
+        println "\n==================== RUN END ======================\n"
+    }
+}
