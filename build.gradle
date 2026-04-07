@@ -21,11 +21,10 @@ tasks.withType(JavaExec).configureEach {
     standardInput = System.in
 }
 
-tasks.named('run') {
-    doFirst {
-        println "\n==================== RUN START ====================\n"
-    }
-    doLast {
-        println "\n==================== RUN END ======================\n"
-    }
+gradle.taskGraph.whenReady {
+    println "\n==================== START ====================\n"
+}
+
+gradle.buildFinished {
+    println "\n==================== END ======================\n"
 }
