@@ -9,4 +9,4 @@ services:
     environment:
       CH: ${CH:-ch01}
       CLASS: ${CLASS:-Main}
-    command: ["sh", "-lc", "echo main=$${CH}.$${CLASS} && ./gradlew run --no-daemon --continuous --console=plain -Pmain=$${CH}.$${CLASS}"]
+    command: ["sh", "-c", "echo main=$${CH}.$${CLASS} && ./gradlew run --no-daemon --continuous --console=plain -Pmain=$${CH}.$${CLASS}"]
