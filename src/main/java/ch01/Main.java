@@ -1,5 +1,8 @@
 package ch01;
 
+// 自作　Iterator は使わない
+import java.util.Iterator;
+
 public class Main {
     public static void main(String[] args) {
         BookShelf bookShelf = new BookShelf(4);

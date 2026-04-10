@@ -1,6 +1,9 @@
 package ch01;
 
-public class BookShelfIterator implements Iterator {
+// 自作　Iterator は使わない
+import java.util.Iterator;
+
+public class BookShelfIterator implements Iterator<Book> {
     private BookShelf bookShelf;
     private int index;
 
@@ -17,7 +20,7 @@ public class BookShelfIterator implements Iterator {
         }
     }
 
-    public Object next() {
+    public Book next() {
         Book book = bookShelf.getBookAt(index);
         index++;
         return book;

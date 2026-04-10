@@ -1,5 +1,8 @@
 package ch01;
 
-public interface Aggregate {
-    public abstract Iterator iterator();
+// 自作　Iterator は使わない
+import java.util.Iterator;
+
+public interface Aggregate<T> {
+    Iterator<T> iterator();
 }

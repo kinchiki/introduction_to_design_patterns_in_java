@@ -1,6 +1,8 @@
-package ch01;
+// 自作　Iterator は使わない
 
-public interface Iterator {
-    public abstract boolean hasNext();
-    public abstract Object next();
-}
+// package ch01;
+
+// public interface Iterator {
+//     public abstract boolean hasNext();
+//     public abstract Object next();
+// }
